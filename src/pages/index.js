@@ -15,7 +15,7 @@ export default function Home({ products }) {
         <Banner />
 
         {/* Product Feed */}
-        <ProductFeed />
+        <ProductFeed products={products} />
         
       </main>
     </div>
