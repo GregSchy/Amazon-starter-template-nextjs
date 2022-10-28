@@ -11,7 +11,7 @@ function Header() {
     <header>
         {/* Top nav */}
     <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
-        <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
+        <div className="mt-2 mr-3 flex items-center flex-grow sm:flex-grow-0">
             <Image
             src="https://links.papareact.com/f90"
             width={150}
@@ -26,24 +26,33 @@ function Header() {
             <SearchIcon className='h-12 p-4' />
         </div>
         {/* Right */}
-        <div className="text-white flex items-center text-xs space-x-6 mx-6">
-            <div>
+        <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
+            <div className="link">
                 <p>Hello My name</p>
-                <p>Account& Lists</p>
+                <p className="font-extrabold md:text-small">Account& Lists</p>
 
             </div>
-            <div>
+            <div className="link">
                 <p>Returns</p>
-                <p>& Orders</p>
+                <p className="font-extrabold md:text-small">& Orders</p>
             </div>
-            <div>
+            <div className="relative link flex items-center">
+                <span className="absolute top-0 right-0 md:right-0 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">0</span>
                 <ShoppingCartIcon className="h-10" />
-                <p>Basket</p>
+                <p className="hidden md:inline font-extrabold md:text-small mt-2">Basket</p>
             </div>
         </div>
     </div>
     {/* Bottom Nav */}
-        <div></div>
+        <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
+            <MenuIcon className="h-6 mr-1"/>
+            <p className="h-6 mr-1">
+            All
+            </p>
+            <p className="link">Prime Video</p>
+            <p className="link">Amazon Business</p>
+            <p className="link">Today's Deals</p>
+        </div>
     </header>
   )
 }
