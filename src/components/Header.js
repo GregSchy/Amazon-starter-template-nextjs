@@ -16,8 +16,9 @@ function Header() {
             src="https://links.papareact.com/f90"
             width={130}
             height={40}
-            objectFit="contain"
+            object-fit="contain"
             className="cursor-pointer ml-1"
+            alt="amazon logo"
              />
         </div>
         {/* Search */}
