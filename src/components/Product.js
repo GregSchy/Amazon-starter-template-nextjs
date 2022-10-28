@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { StarIcon } from "@heroicons/react/solid"
+import Currency from 'react-currency-formatter';
 
 const MAX_RATING = 5;
 const MIN_RATING =1;
@@ -10,11 +11,14 @@ function Product({id, title, price, description, category, image}) {
         Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
     );
 
+ const [hasPrime] = useState(Math.random() < 0.5)   
+
 
   return (
     <div>
         <h1>{category}</h1>
         <Image src={image} height={200} width={200} object-fit="contain" />
+
         <h4>{title}</h4>
         
         <div className="flex">
@@ -23,6 +27,12 @@ function Product({id, title, price, description, category, image}) {
         .map((_, i) =>( 
         <StarIcon className="h-5" />
         ))}
+        </div>
+
+        <p>{description}</p>
+
+        <div>
+           <Currency quantity={price} currency="GBP" />     
         </div>
 
 
