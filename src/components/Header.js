@@ -14,10 +14,10 @@ function Header() {
         <div className="mt-2 mr-3 flex items-center flex-grow sm:flex-grow-0">
             <Image
             src="https://links.papareact.com/f90"
-            width={150}
+            width={130}
             height={40}
             objectFit="contain"
-            className="cursor-pointer"
+            className="cursor-pointer ml-1"
              />
         </div>
         {/* Search */}
@@ -45,13 +45,19 @@ function Header() {
     </div>
     {/* Bottom Nav */}
         <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
+            <p className="link flex items-center">
             <MenuIcon className="h-6 mr-1"/>
-            <p className="h-6 mr-1">
             All
             </p>
             <p className="link">Prime Video</p>
             <p className="link">Amazon Business</p>
             <p className="link">Today's Deals</p>
+            <p className="link hidden lg:inline-flex">Electronics</p>
+            <p className="link hidden lg:inline-flex">Food & Grocery</p>
+            <p className="link hidden lg:inline-flex">Prime</p>
+            <p className="link hidden lg:inline-flex">Buy Again</p>
+            <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
+            <p className="link hidden lg:inline-flex">Health & Personal Care</p>
         </div>
     </header>
   )
