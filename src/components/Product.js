@@ -38,6 +38,7 @@ function Product({id, title, price, description, category, image}) {
 
 
 
+
     </div>
   )
 }
