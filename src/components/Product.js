@@ -21,13 +21,15 @@ function Product({id, title, price, description, category, image}) {
 
         <h4>{title}</h4>
         
-        <div className="flex">
+
+        {/* PROBLEM Z RENDEREM  */}
+        {/* <div className="flex">
         {Array(rating)
         .fill()
         .map((_, i) =>( 
         <StarIcon className="h-5" />
         ))}
-        </div>
+        </div> */}
 
         <p>{description}</p>
 
@@ -35,7 +37,14 @@ function Product({id, title, price, description, category, image}) {
            <Currency quantity={price} currency="GBP" />     
         </div>
 
+        {hasPrime && (
+          <div>
+            <img src="https://links.papareact.com/fdw" alt="" />
+            <p>FREE Next-day Deliveru</p>
+          </div>
+        )}  
 
+        <button>Add to Basket</button> 
 
 
     </div>
